@@ -1,7 +1,10 @@
 public class CaveMan {
-	String name;
-	int age;
-	float weight;
+
+	// getters and setters,
+	// private means these props are not accessible (hidden) from outside this class, hence 
+	private String name;
+	private int age;
+	private float weight;
 	
 	// parameterised constructor
 	public CaveMan(String n, int a, float w) {
@@ -15,6 +18,30 @@ public class CaveMan {
 		this.name="They haven't given me a name yet";
 		this.age=0;
 		this.weight=100f;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public float getWeight() {
+		return weight;
+	}
+
+	public void setWeight(float weight) {
+		this.weight = weight;
 	}
 
 	public void SayHi() {

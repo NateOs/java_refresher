@@ -78,7 +78,7 @@ public class MainGame {
 			System.out.println("The number is an unlucky number " + number);
 		}
 		*/
-		
+
 		//let's do some objects
 
 		CaveMan c1 = new CaveMan();
@@ -86,5 +86,10 @@ public class MainGame {
 
 		c1.SayHi();
 		c2.SayHi();
-	} 
+
+		c1.setName("John");
+
+		c1.SayHi();
+		c2.SayHi();
+	}
 }
