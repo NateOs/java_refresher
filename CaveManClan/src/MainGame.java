@@ -82,7 +82,7 @@ public class MainGame {
 		//let's do some objects
 
 		CaveMan c1 = new CaveMan();
-		CaveMan c2 = new CaveMan("Bob", 20, 150f);
+		CaveMan c2 = new CaveMan("Bob", 20, 150f, new ArrayList<Rock>());
 
 		c1.SayHi();
 		c2.SayHi();
@@ -91,5 +91,33 @@ public class MainGame {
 
 		c1.SayHi();
 		c2.SayHi();
+
+		System.out.println("c1 is " + c1);
+		System.out.println("c2 is " + c2);
+
+		// creating rock objects from class
+		Rock r1 = new Rock();
+		Rock r2 = new Rock("red", 88.5f);
+		Rock r3 = new Rock("green", 85.5f);
+		Rock r4 = new Rock("grey", 90.5f);
+
+		// adding rock objects to an arrayList as a collection of rocks
+		ArrayList<Rock> rocks = new ArrayList<>();
+
+		rocks.add(r1);
+		rocks.add(r2);
+		rocks.add(r3);
+		rocks.add(r4);
+
+		// assigned rock collection to cavemen
+		c2.setRockCollection(rocks);
+
+
+		ArrayList<Rock> otherRocks = new ArrayList<>();
+		otherRocks.add(r3);
+		c1.setRockCollection(otherRocks);
+
+		System.out.println("rock collection contains " + c2.getRockCollection().size() + " rocks: " + c2.getRockCollection());
+		System.out.println("rock collection contains " + c1.getRockCollection().size() + " rocks: " + c1.getRockCollection());
 	}
 }
